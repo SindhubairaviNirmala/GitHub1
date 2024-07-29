@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="navbar">
+        <h1>Film Notes</h1>
+    </div>
+    <div class="container" id="notes">
+        <div class="scene-container">
+            <h2>Movie name</h2>
+            <h4>Scene no</h4>
+            <h4>Time-D/N</h4>
+            <h4>Location-I/E</h4>
+            <h4>Character</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <button onclick="deletescene(event)">Delete</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+
+    <div class="popup-box">
+        <h2>Add scene</h2>
+        <form>
+            <input type="text" placeholder="Movie name" id="movie-name-input"></input>
+            <input type="text" placeholder="Scene no" id="scene-no-input"></input>
+            <input type="text" placeholder="Time-D/N" id="time-input"></input>
+            <input type="text" placeholder="Location-I/E" id="location-input"></input>
+            <input type="text" placeholder="Character" id="character-input"></input>
+            <textarea placeholder="Description" id="description-input"></textarea>
+            <button id="add-scene">Add</button>
+            <button id="cancel-scene">Cancel</button>
+        </form>
+    </div>
+
+    <button class="add-button" id="add-popup-button notes"><strong>+</strong></button>
+    <script src="script.js"></script
+</body>
+</html>
