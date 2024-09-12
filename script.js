@@ -38,7 +38,7 @@ addscene.addEventListener("click",function(event){
                    <h4>${locationinput.value}</h4>
                    <h4>${characterinput.value}</h4> 
                    <p>${descriptioninput.value}</p>
-                   <button onclick="deletescene(event)">Delete</button>`
+                   <button onclick="deletescene(event)" style="width:60px">Delete</button>`
     container.append(div)
     popupoverlay.style.display="none"
     popupbox.style.display="none"
