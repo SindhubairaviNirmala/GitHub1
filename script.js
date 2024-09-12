@@ -21,7 +21,7 @@ cancelscene.addEventListener("click",function(event){
 //select container,add book,book title,author,description input
 var container=document.querySelector(".container")
 var addscene=document.getElementById("add-scene")
-var movienameinput=document.getElementById("movie-name-input")
+var movieinput=document.getElementById("movie-input")
 var scenenoinput=document.getElementById("scene-no-input")
 var timeinput=document.getElementById("time-input")
 var locationinput=document.getElementById("location-input")
@@ -32,7 +32,7 @@ addscene.addEventListener("click",function(event){
     event.preventDefault()
     var div=document.createElement("div")
     div.setAttribute("class","scene-container")
-    div.innerHTML=`<h2>${movienameinput.value}</h2>
+    div.innerHTML=`<h2>${movieinput.value}</h2>
                    <h4>${scenenoinput.value}</h4>
                    <h4>${timeinput.value}</h4>
                    <h4>${locationinput.value}</h4>
@@ -43,6 +43,13 @@ addscene.addEventListener("click",function(event){
     popupoverlay.style.display="none"
     popupbox.style.display="none"
 
+    localStorage.setItem('ls-movie-input',movieinput.value);
+    localStorage.setItem('ls-scene-no-input',scenenoinput.value);
+    localStorage.setItem('ls-time-input',timeinput.value);
+    localStorage.setItem('ls-location-input',locationinput.value);
+    localStorage.setItem('ls-character-input',characterinput.value);
+    localStorage.setItem('ls-description-input',descriptioninput.value);
+
 
 })
 
@@ -50,3 +57,17 @@ function deletescene(event)
 {
     event.target.parentElement.remove()
 }
+
+
+
+/*local storage
+const input=document.getElementById("movie-name-input")
+const storedValue=localStorage.getItem("inputValue")
+
+if(storedValue){
+    input.value=storedValue;
+}
+
+input.addEventListener("input",(e)=>{
+    localStorage.setItem("inputValue",e.target.value)
+})*/
